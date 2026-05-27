@@ -1,0 +1,2178 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aulas Sin Fronteras - Poster Cientifico UNAD 2026</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --naranja: #f26522;
+        --negro: #0e0f12;
+        --gris: #16181f;
+        --borde: #2a2c35;
+        --texto: #d4d6dc;
+        --opaco: #7a7f90;
+      }
+
+      body {
+        background: var(--negro);
+        font-family: "Barlow", sans-serif;
+        color: var(--texto);
+        font-size: 15px;
+        line-height: 1.6;
+        padding: 16px;
+      }
+
+      /* POSTER */
+      .poster {
+        max-width: 1200px;
+        margin: 0 auto;
+        border: 2px solid var(--naranja);
+      }
+
+      /* ENCABEZADO */
+      .encabezado {
+        background: var(--gris);
+        border-bottom: 2px solid var(--naranja);
+        padding: 20px 26px;
+      }
+
+      .encabezado h1 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 1.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #fff;
+        margin-bottom: 6px;
+      }
+
+      .encabezado .curso {
+        font-size: 0.82rem;
+        color: var(--opaco);
+        margin-bottom: 10px;
+      }
+
+      .autores {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .autor {
+        font-size: 0.8rem;
+        color: var(--opaco);
+        background: var(--negro);
+        border: 1px solid var(--borde);
+        padding: 3px 10px;
+      }
+
+      /* GRID 3 COLUMNAS */
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1.55fr 1fr;
+      }
+
+      .col {
+        padding: 18px 16px;
+        border-right: 1px solid var(--borde);
+      }
+      .col:last-child {
+        border-right: none;
+      }
+
+      /* SECCION */
+      .seccion {
+        margin-bottom: 20px;
+      }
+
+      .seccion-titulo {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background: var(--naranja);
+        color: #000;
+        padding: 7px 14px;
+        margin-bottom: 10px;
+        clip-path: polygon(0 0, 91% 0, 100% 100%, 0 100%);
+      }
+
+      .seccion p {
+        font-size: 0.88rem;
+        color: var(--texto);
+        margin-bottom: 8px;
+      }
+
+      .seccion ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .seccion ul li {
+        font-size: 0.85rem;
+        color: var(--texto);
+        padding-left: 10px;
+        border-left: 2px solid var(--naranja);
+        line-height: 1.5;
+      }
+
+      /* TABLA SPRINTS */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.82rem;
+      }
+
+      table th {
+        background: var(--naranja);
+        color: #000;
+        font-weight: 700;
+        padding: 5px 8px;
+        text-align: left;
+        font-family: "Barlow Condensed", sans-serif;
+        letter-spacing: 0.06em;
+        font-size: 0.78rem;
+      }
+
+      table td {
+        padding: 5px 8px;
+        border-bottom: 1px solid var(--borde);
+        color: var(--texto);
+      }
+
+      table tr:last-child td {
+        border-bottom: none;
+      }
+      table tr:nth-child(even) td {
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      /* GALERIA CAPTURAS */
+      .galeria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .captura {
+        background: #000;
+        border: 1px solid var(--borde);
+        overflow: hidden;
+      }
+
+      .captura-label {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 0.72rem;
+        color: var(--opaco);
+        background: var(--gris);
+        border-bottom: 1px solid var(--borde);
+        padding: 3px 8px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      /* Mock pantallas del prototipo */
+      .mock {
+        padding: 8px;
+      }
+
+      /* Pre-login mock */
+      .mock-login-box {
+        background: #fff;
+        border-radius: 4px;
+        padding: 10px;
+        text-align: center;
+      }
+      .mock-login-title {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 6px;
+      }
+      .mock-avatar {
+        width: 28px;
+        height: 28px;
+        background: #ccc;
+        border-radius: 50%;
+        margin: 0 auto 6px;
+      }
+      .mock-select-label {
+        font-size: 0.65rem;
+        color: #555;
+        margin-bottom: 3px;
+      }
+      .mock-role {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+        background: #f0f0f0;
+        color: #333;
+        margin-bottom: 2px;
+        text-align: left;
+      }
+      .mock-role.active {
+        background: #1a6fcf;
+        color: #fff;
+      }
+
+      /* Dashboard mock alumno */
+      .mock-dash-box {
+        background: #f7f9fc;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .mock-dash-header {
+        background: #1a6fcf;
+        color: #fff;
+        font-size: 0.65rem;
+        padding: 4px 8px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .mock-dash-nav {
+        background: #e8f0fa;
+        display: flex;
+        gap: 2px;
+        padding: 3px 6px;
+        flex-wrap: wrap;
+      }
+      .mock-nav-item {
+        font-size: 0.58rem;
+        padding: 1px 5px;
+        color: #555;
+        border: 1px solid #ccc;
+      }
+      .mock-nav-item.on {
+        background: #1a6fcf;
+        color: #fff;
+        border-color: #1a6fcf;
+      }
+      .mock-content {
+        padding: 6px 8px;
+      }
+      .mock-class-row {
+        display: grid;
+        grid-template-columns: 1fr 55px 24px;
+        gap: 4px;
+        align-items: center;
+        font-size: 0.58rem;
+        color: #444;
+        margin-bottom: 3px;
+      }
+      .bar {
+        background: #dde;
+        height: 5px;
+        border-radius: 2px;
+      }
+      .fill {
+        background: #1a6fcf;
+        height: 100%;
+        border-radius: 2px;
+      }
+      .pct {
+        font-size: 0.55rem;
+        color: #1a6fcf;
+        text-align: right;
+      }
+
+      /* Dashboard tutor mock */
+      .mock-tutor-header {
+        background: #28a745;
+        color: #fff;
+        font-size: 0.65rem;
+        padding: 4px 8px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .mock-alert {
+        font-size: 0.6rem;
+        padding: 3px 6px;
+        border-left: 2px solid;
+        margin-bottom: 3px;
+      }
+      .alert-warn {
+        border-color: #f26522;
+        background: rgba(242, 101, 34, 0.08);
+        color: #555;
+      }
+      .alert-info {
+        border-color: #f0ad00;
+        background: rgba(240, 173, 0, 0.08);
+        color: #555;
+      }
+
+      /* SQL snippet */
+      .sql-box {
+        background: #000;
+        border: 1px solid var(--borde);
+        border-left: 3px solid var(--naranja);
+        padding: 10px 12px;
+        font-family: "Courier New", monospace;
+        margin-bottom: 10px;
+      }
+      .sql-line {
+        font-size: 0.75rem;
+        color: #ccc;
+        line-height: 1.7;
+      }
+      .kw {
+        color: var(--naranja);
+      }
+      .fn {
+        color: #7ec8e3;
+      }
+
+      .result-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 5px;
+        margin-top: 8px;
+      }
+      .result-item {
+        background: var(--gris);
+        border: 1px solid var(--borde);
+        border-top: 2px solid var(--naranja);
+        padding: 6px 4px;
+        text-align: center;
+      }
+      .result-num {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--naranja);
+        line-height: 1;
+      }
+      .result-lbl {
+        font-size: 0.6rem;
+        color: var(--opaco);
+        margin-top: 2px;
+      }
+
+      /* TRL */
+      .trl-track {
+        display: flex;
+        gap: 3px;
+        margin-bottom: 4px;
+      }
+      .trl-step {
+        flex: 1;
+        height: 28px;
+        background: var(--gris);
+        border: 1px solid var(--borde);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--opaco);
+      }
+      .trl-done {
+        background: rgba(242, 101, 34, 0.12);
+        border-color: rgba(242, 101, 34, 0.4);
+        color: var(--naranja);
+      }
+      .trl-current {
+        background: var(--naranja);
+        color: #000;
+      }
+      .trl-labels {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.62rem;
+        color: var(--opaco);
+      }
+
+      /* BIBLIO */
+      .biblio-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .biblio-list li {
+        font-size: 0.78rem;
+        color: var(--opaco);
+        padding-left: 10px;
+        border-left: 2px solid var(--borde);
+        line-height: 1.5;
+      }
+      .biblio-list li em {
+        color: var(--texto);
+      }
+
+      /* ACCESO */
+      .acceso-box {
+        background: #000;
+        border: 1px solid var(--borde);
+        padding: 10px 12px;
+        margin-top: 8px;
+      }
+      .acceso-titulo {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        color: var(--naranja);
+        margin-bottom: 5px;
+      }
+      .acceso-url {
+        font-family: "Courier New", monospace;
+        font-size: 0.72rem;
+        color: var(--texto);
+        margin-bottom: 6px;
+        word-break: break-all;
+      }
+      .cred {
+        font-family: "Courier New", monospace;
+        font-size: 0.72rem;
+        color: #7ec8e3;
+      }
+      .cred::before {
+        content: "> ";
+        color: var(--opaco);
+      }
+
+      /* PIE */
+      .pie {
+        background: var(--gris);
+        border-top: 1px solid var(--borde);
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.72rem;
+        color: var(--opaco);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="poster">
+      <!-- ENCABEZADO -->
+      <div class="encabezado">
+        <h1>Proyecto: Aulas Sin Fronteras - Ecosistema Rural</h1>
+        <div class="curso">
+          Proyecto de Ingenieria II &nbsp;|&nbsp; UNAD &nbsp;|&nbsp; ECBTI
+          &nbsp;|&nbsp; Grupo 202337121_143 &nbsp;|&nbsp; Mayo 2026
+          &nbsp;|&nbsp; Tutora: Angelica Calderon
+        </div>
+        <div class="autores">
+          <span class="autor">Diego Alejandro Carreno Garcia</span>
+          <span class="autor">Jorge David Casas Caro</span>
+          <span class="autor">Julian David Lara Gonzalez</span>
+          <span class="autor">Jorge Arturo Monroy</span>
+        </div>
+      </div>
+
+      <!-- GRID -->
+      <div class="grid">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="col">
+          <div class="seccion">
+            <div class="seccion-titulo">Introduccion</div>
+            <p>
+              El presente informe documenta el desarrollo y la implementación de
+              la práctica simulada correspondiente durante su desarrollo en el
+              curso Proyecto de Ingeniería II. En esta etapa, el equipo de
+              trabajo se enfoca en la transición hacia un prototipo de alta
+              fidelidad para la solución tecnológica denominada "Aulas sin
+              fronteras", la cual busca mitigar las brechas educativas en zonas
+              rurales de la localidad de Usme mediante una plataforma web
+              deslocalizada. A través de la integración de metodologías ágiles
+              utilizando la herramienta JIRA, se ha estructurado un flujo de
+              trabajo que incluye la gestión de un Backlog, la creación de
+              historias de usuario y la ejecución de un Sprint inicial enfocado
+              en la seguridad y accesibilidad del sistema. Este documento
+              detalla tanto la gestión administrativa del proyecto como las
+              especificaciones técnicas del prototipo funcional desarrollado con
+              tecnologías de frontend moderna
+            </p>
+            <p>
+              La IED Rural El Destino (Usme, Bogota) enfrenta una alta tasa de
+              desercion escolar causada por barreras geograficas y de movilidad
+              que impiden el desplazamiento de los estudiantes.
+            </p>
+            <p>
+              <strong style="color: #fff">Aulas Sin Fronteras</strong> es un
+              ecosistema digital deslocalizado que centraliza la interaccion
+              academica de cinco actores: alumno, profesor, tutor/padre,
+              auxiliar y administrador, eliminando la necesidad de
+              desplazamiento fisico.
+            </p>
+            <p style="margin-top: 6px; font-size: 0.82rem; color: var(--opaco)">
+              Alineado con el
+              <strong style="color: var(--naranja)">ODS 4</strong> — Educacion
+              de Calidad.
+            </p>
+          </div>
+
+          <div class="seccion">
+            <div class="seccion-titulo">Materiales y Métodos</div>
+            <ul>
+              <li>
+                <strong style="color: #fff"
+                  >Metodología Ágil / Marco Scrum en JIRA</strong
+                >
+                — Estructuración del proyecto mediante el software Jira Product
+                Discovery y Jira Software. Se gestionaron 4 Sprints iterativos e
+                incrementales utilizando artefactos robustos: un Product Backlog
+                priorizado, la definición de Épicas de desarrollo y la redacción
+                de Historias de Usuario bajo el formato estandarizado. El flujo
+                fue liderado por un equipo de 4 integrantes y una tutora
+                académica, implementando reuniones diarias (Dailies) y
+                retrospectivas para mitigar riesgos de desarrollo.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Desarrollo Frontend y Optimización Rural</strong
+                >
+                — Implementación de una arquitectura de software basada en
+                estándares web modernos: HTML5 semántico para accesibilidad,
+                CSS3 modular y el framework Bootstrap 5.3 para garantizar un
+                diseño responsivo adaptado a dispositivos móviles. La lógica del
+                cliente se programó con JavaScript ES6 sin dependencias pesadas.
+                Todo el entorno fue codificado en Visual Studio Code y
+                desplegado en GitHub Pages, priorizando una carga de scripts
+                extremadamente liviana (Single Page Application - SPA) idónea
+                para la infraestructura de red de baja conectividad en Usme.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Arquitectura de Datos e Integridad Referencial</strong
+                >
+                — Diseño e implementación de un sistema de gestión de bases de
+                datos utilizando SQL Server. Se modeló un Diagrama
+                Entidad-Relación (DER) optimizado para granular los 5 roles
+                clave del ecosistema educativo (Alumno, Profesor, Auxiliar
+                Académico, Tutor y Administrador). Se ejecutó el poblamiento
+                inicial mediante scripts con más de 50 registros de prueba
+                (<code style="color: #aed8f2">INSERT INTO</code>), auditando y
+                verificando estrictamente la integridad referencial a través de
+                llaves primarias (PK) y foráneas (FK) para evitar redundancias.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Diseño Centrado en el Usuario (UX/UI) y Aseguramiento de
+                  Calidad</strong
+                >
+                — Evolución dirigida desde un prototipo conceptual en Figma
+                (baja y media fidelidad) enfocado en la usabilidad infantil y
+                accesibilidad comunitaria, hasta su implementación final en
+                código HTML de alta fidelidad. El proceso de Aseguramiento de
+                Calidad (QA) incluyó la ejecución de Pruebas de Aceptación de
+                Usuario (UAT) para validar el flujo del Auxiliar Académico y del
+                Tutor, junto con Smoke Tests estratégicos en GitHub Pages para
+                garantizar la estabilidad de los scripts de validación del login
+                centralizado.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Marco Lógico y Enfoque de Impacto Social (ODS 4)</strong
+                >
+                — Planificación metodológica estructurada mediante la Matriz de
+                Marco Lógico (MML), partiendo de un Árbol de Problemas y de
+                Objetivos que diagnostica la brecha digital en la IED Rural El
+                Destino. La matriz conecta los componentes técnicos del software
+                con los indicadores de impacto del Objetivo de Desarrollo
+                Sostenible 4 (Educación de Calidad), validando cómo el rol del
+                Auxiliar Académico mitiga de manera directa la deserción escolar
+                y la falta de acompañamiento técnico en campo.
+              </li>
+            </ul>
+          </div>
+
+          <div class="seccion">
+            <div class="seccion-titulo">Ejecución por Sprints</div>
+
+            <p
+              style="
+                margin-bottom: 12px;
+                font-size: 0.85rem;
+                text-align: justify;
+                color: var(--opaco);
+              "
+            >
+              La implementación de <strong>Aulas Sin Fronteras</strong> se
+              organizó en 4 Sprints en Jira, priorizando componentes críticos de
+              conectividad, roles y el núcleo del proyecto (Auxiliar Académico y
+              Tutor). El flujo garantizó que el backend y las mecánicas
+              gamificadas del ODS 4 se integraran con pruebas de rendimiento
+              livianas para la infraestructura rural de la IED El Destino.
+            </p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 12%">Sprint</th>
+                  <th style="width: 73%">
+                    Entregable Técnico y Foco Funcional
+                  </th>
+                  <th style="width: 15%; text-align: center">HU Realizadas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>S1</strong></td>
+                  <td>
+                    <strong
+                      >Arquitectura de Acceso y Portal de Identidad
+                      Centralizado:</strong
+                    ><br />
+                    Desarrollo del Pre-Login (selección de rol) y pantalla de
+                    Autenticación Universal. Configuración del enrutamiento
+                    inicial y optimización de scripts ligeros de validación en
+                    el cliente para mitigar la latencia de red rural.
+                  </td>
+                  <td style="text-align: center">5</td>
+                </tr>
+                <tr>
+                  <td><strong>S2</strong></td>
+                  <td>
+                    <strong
+                      >Ecosistema Adaptativo de Dashboards Modulares:</strong
+                    ><br />
+                    Maquetación e implementación HTML5/CSS3 de las interfaces de
+                    control para los 5 perfiles. Configuración prioritaria del
+                    espacio del <strong>Auxiliar Académico</strong> como eje
+                    conector y del <strong>Tutor (Padre)</strong> para el
+                    monitoreo adaptado.
+                  </td>
+                  <td style="text-align: center">5</td>
+                </tr>
+                <tr>
+                  <td><strong>S3</strong></td>
+                  <td>
+                    <strong
+                      >Módulos de Trazabilidad, Asimilación y Alertas
+                      Tempranas:</strong
+                    ><br />
+                    Integración de funciones de mensajería, visualización de
+                    avance y un sistema de alertas bidireccionales. Esto permite
+                    al Auxiliar enviar reportes de soporte y al Tutor recibir el
+                    estado pedagógico del estudiante sin saturar el canal de
+                    datos.
+                  </td>
+                  <td style="text-align: center">5</td>
+                </tr>
+                <tr>
+                  <td><strong>S4</strong></td>
+                  <td>
+                    <strong
+                      >Persistencia SQL, Núcleo de Gamificación (ODS 4) y
+                      Despliegue:</strong
+                    ><br />
+                    Acoplamiento de la base de datos relacional SQL Server
+                    (integridad referencial, scripts
+                    <code style="color: #aed8f2">INSERT INTO</code>), despliegue
+                    de las mecánicas de juego interactivas para alumnos y
+                    publicación del entorno productivo estable en GitHub Pages.
+                  </td>
+                  <td style="text-align: center">8</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p
+              style="
+                margin-top: 10px;
+                font-size: 0.75rem;
+                color: var(--opaco);
+                font-style: italic;
+              "
+            >
+              Espacio de Trabajo Oficial en JIRA:
+              <a
+                href="https://julianlaraworkspace-23462604.atlassian.net"
+                target="_blank"
+                style="color: #aed8f2; text-decoration: underline"
+              >
+                julianlaraworkspace-23462604.atlassian.net
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- COLUMNA CENTRAL -->
+        <div class="col">
+          <div class="seccion">
+            <div class="seccion-titulo">
+              Tablas, Gráficos y Figuras del Proyecto
+            </div>
+
+            <div style="margin-bottom: 20px">
+              <span
+                style="
+                  font-size: 0.9rem;
+                  font-weight: bold;
+                  color: #fff;
+                  display: block;
+                  margin-bottom: 10px;
+                "
+              >
+                Módulos de Alta Fidelidad Implementados (Vistas de Interfaz)
+              </span>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                  gap: 12px;
+                "
+              >
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 6px;
+                    padding: 12px;
+                    text-align: center;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      font-weight: bold;
+                      color: #aed8f2;
+                      margin-bottom: 6px;
+                    "
+                  >
+                    Pre-Login y Roles
+                  </div>
+                  <img src="./img/Pre_Login_Seleccion_Rol.jpeg" alt="Pre-Login Selección de Rol" style="width:100%;max-height:120px;object-fit:cover;border-radius:4px;margin-bottom:6px;" />
+                  <div
+                    style="
+                      font-size: 0.75rem;
+                      color: var(--opaco);
+                      line-height: 1.3;
+                    "
+                  >
+                    Pantalla de selección interactiva de los 5 perfiles para la
+                    comunidad de Usme.
+                  </div>
+                </div>
+
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 6px;
+                    padding: 12px;
+                    text-align: center;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      font-weight: bold;
+                      color: #aed8f2;
+                      margin-bottom: 6px;
+                    "
+                  >
+                    Dashboard Alumno
+                  </div>
+                  <img src="./img/Dashboard_Alumno.jpeg" alt="Dashboard Alumno" style="width:100%;max-height:120px;object-fit:cover;border-radius:4px;margin-bottom:6px;" />
+                  <div
+                    style="
+                      font-size: 0.75rem;
+                      color: var(--opaco);
+                      line-height: 1.3;
+                    "
+                  >
+                    Panel de control centralizado con 8 módulos de interacción y
+                    juegos ODS4.
+                  </div>
+                </div>
+
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 6px;
+                    padding: 12px;
+                    text-align: center;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      font-weight: bold;
+                      color: #aed8f2;
+                      margin-bottom: 6px;
+                    "
+                  >
+                    Dashboard del Tutor
+                  </div>
+                  <img src="./img/Dashboard_Tutor_Padre.jpeg" alt="Dashboard Tutor Padre" style="width:100%;max-height:120px;object-fit:cover;border-radius:4px;margin-bottom:6px;" />
+                  <div
+                    style="
+                      font-size: 0.75rem;
+                      color: var(--opaco);
+                      line-height: 1.3;
+                    "
+                  >
+                    Módulo especializado de alertas de soporte e indicadores
+                    para el Padre de Familia.
+                  </div>
+                </div>
+
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 6px;
+                    padding: 12px;
+                    text-align: center;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      font-weight: bold;
+                      color: #aed8f2;
+                      margin-bottom: 6px;
+                    "
+                  >
+                    Dashboard Administrador
+                  </div>
+                  <img src="./img/Dashboard_Administrador.jpeg" alt="Dashboard Administrador" style="width:100%;max-height:120px;object-fit:cover;border-radius:4px;margin-bottom:6px;" />
+                  <div
+                    style="
+                      font-size: 0.75rem;
+                      color: var(--opaco);
+                      line-height: 1.3;
+                    "
+                  >
+                    Consola global para la gestión técnica del sistema y
+                    configuración de accesos.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="
+                margin-bottom: 20px;
+                padding: 10px;
+                background: rgba(174, 216, 242, 0.08);
+                border-left: 4px solid #aed8f2;
+                border-radius: 4px;
+              "
+            >
+              <span
+                style="
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  color: #fff;
+                  display: block;
+                  margin-bottom: 4px;
+                "
+              >
+                Entorno de Producción y Pruebas Web (GitHub Pages):</span
+              >
+              <a
+                href="https://jdlara83.github.io/proyecto_ingenieria_1/inicio_sesion_administrador.html"
+                target="_blank"
+                style="
+                  color: #aed8f2;
+                  font-size: 0.78rem;
+                  text-decoration: underline;
+                  word-break: break-all;
+                "
+              >
+                https://jdlara83.github.io/proyecto_ingenieria_1/inicio_sesion_administrador.html
+              </a>
+            </div>
+
+            <div style="margin-bottom: 20px">
+              <span
+                style="
+                  font-size: 0.9rem;
+                  font-weight: bold;
+                  color: #fff;
+                  display: block;
+                  margin-bottom: 10px;
+                "
+              >
+                Gráfico Analítico de Registros Poblados por Rol (<code
+                  style="color: #aed8f2"
+                  >COUNT(*)</code
+                >)
+              </span>
+
+              <div class="sql-box" style="margin-bottom: 12px">
+                <div class="sql-line">
+                  <span class="kw">SELECT</span> rol,
+                  <span class="fn">COUNT</span>(*)
+                  <span class="kw">FROM</span> dbo.usuarios
+                  <span class="kw">GROUP BY</span> rol;
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 8px;
+                  background: rgba(0, 0, 0, 0.2);
+                  padding: 12px;
+                  border-radius: 6px;
+                  border: 1px solid rgba(255, 255, 255, 0.05);
+                "
+              >
+                <div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      font-size: 0.75rem;
+                      margin-bottom: 3px;
+                      color: #fff;
+                    "
+                  >
+                    <span>Profesor</span><strong>17 registros</strong>
+                  </div>
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.1);
+                      border-radius: 4px;
+                      height: 10px;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #aed8f2;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 4px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      font-size: 0.75rem;
+                      margin-bottom: 3px;
+                      color: #fff;
+                    "
+                  >
+                    <span>Auxiliar Académico (Núcleo)</span
+                    ><strong>13 registros</strong>
+                  </div>
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.1);
+                      border-radius: 4px;
+                      height: 10px;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #76b1d8;
+                        width: 76%;
+                        height: 100%;
+                        border-radius: 4px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      font-size: 0.75rem;
+                      margin-bottom: 3px;
+                      color: #fff;
+                    "
+                  >
+                    <span>Administrador</span><strong>12 registros</strong>
+                  </div>
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.1);
+                      border-radius: 4px;
+                      height: 10px;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #4e8eb8;
+                        width: 70%;
+                        height: 100%;
+                        border-radius: 4px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      font-size: 0.75rem;
+                      margin-bottom: 3px;
+                      color: #fff;
+                    "
+                  >
+                    <span>Alumno Rural</span><strong>6 registros</strong>
+                  </div>
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.1);
+                      border-radius: 4px;
+                      height: 10px;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #2d6b91;
+                        width: 35%;
+                        height: 100%;
+                        border-radius: 4px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      font-size: 0.75rem;
+                      margin-bottom: 3px;
+                      color: #fff;
+                    "
+                  >
+                    <span>Tutor (Padre de Familia)</span
+                    ><strong>4 registros</strong>
+                  </div>
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.1);
+                      border-radius: 4px;
+                      height: 10px;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #194b69;
+                        width: 23%;
+                        height: 100%;
+                        border-radius: 4px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="seccion"
+              style="margin-top: 14px; margin-bottom: 0; padding: 0"
+            >
+              <div class="seccion" style="margin-top: 25px">
+                <div
+                  style="
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    color: #fff;
+                    margin-bottom: 4px;
+                  "
+                >
+                  Evidencia de Gestión y Flujo de Trabajo en JIRA Software
+                </div>
+                <p
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--opaco);
+                    margin-bottom: 12px;
+                    text-align: justify;
+                  "
+                >
+                  A continuación se documenta el entorno de administración del
+                  proyecto en la plataforma Atlassian JIRA, evidenciando la
+                  trazabilidad de requerimientos y el control del Sprint inicial
+                  para el desarrollo del prototipo TRL 4.
+                </p>
+
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit: minmax(240px, 1fr));
+                    gap: 14px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.02);
+                      border: 1px dashed rgba(174, 216, 242, 0.4);
+                      border-radius: 6px;
+                      padding: 10px;
+                    "
+                  >
+                    <div
+                      style="
+                        font-size: 0.78rem;
+                        font-weight: bold;
+                        color: #aed8f2;
+                        margin-bottom: 6px;
+                      "
+                    >
+                      Figura A: Product Backlog y Épicas
+                    </div>
+                    <div
+                      class="dashboard-wrapper p-2 bg-white rounded border shadow-sm text-center"
+                      style="
+                        background-color: #1a252f !important;
+                        min-height: 150px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      <img
+                        src="./img/productbacklog.png"
+                        alt="Estructura del Backlog e Historias de Usuario en JIRA"
+                        class="img-fluid rounded"
+                        style="
+                          max-width: 100%;
+                          max-height: 140px;
+                          object-fit: contain;
+                          margin: 0 auto;
+                          display: block;
+                        "
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.02);
+                      border: 1px dashed rgba(174, 216, 242, 0.4);
+                      border-radius: 6px;
+                      padding: 10px;
+                    "
+                  >
+                    <div
+                      style="
+                        font-size: 0.78rem;
+                        font-weight: bold;
+                        color: #aed8f2;
+                        margin-bottom: 6px;
+                      "
+                    >
+                      Figura B: Tablero de Sprint Activo
+                    </div>
+                    <div
+                      class="dashboard-wrapper p-2 bg-white rounded border shadow-sm text-center"
+                      style="
+                        background-color: #1a252f !important;
+                        min-height: 150px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      <img
+                        src="./img/lelemntos_y_tipos_de_trabajo.jpeg"
+                        alt="Tablero de control Kanban/Scrum en JIRA"
+                        class="img-fluid rounded"
+                        style="
+                          max-width: 100%;
+                          max-height: 160px;
+                          object-fit: contain;
+                          margin: 0 auto;
+                          display: block;
+                        "
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div style="margin-top: 15px">
+                  <div
+                    style="
+                      font-size: 0.82rem;
+                      font-weight: bold;
+                      color: #fff;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    Tabla de Control y Cobertura de Requerimientos (Métricas
+                    Scrum)
+                  </div>
+                  <table
+                    style="
+                      width: 100%;
+                      font-size: 0.78rem;
+                      border-collapse: collapse;
+                      background: rgba(0, 0, 0, 0.15);
+                    "
+                  >
+                    <thead>
+                      <tr
+                        style="
+                          background: rgba(174, 216, 242, 0.1);
+                          border-bottom: 1px solid rgba(174, 216, 242, 0.2);
+                        "
+                      >
+                        <th
+                          style="padding: 8px; text-align: left; color: #aed8f2"
+                        >
+                          Módulo / Épica JIRA
+                        </th>
+                        <th
+                          style="
+                            padding: 8px;
+                            text-align: center;
+                            color: #aed8f2;
+                          "
+                        >
+                          Historias (HU)
+                        </th>
+                        <th
+                          style="
+                            padding: 8px;
+                            text-align: center;
+                            color: #aed8f2;
+                          "
+                        >
+                          Estimación (Puntos)
+                        </th>
+                        <th
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #28a745;
+                          "
+                        >
+                          Estado de Cobertura
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        style="
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                        "
+                      >
+                        <td style="padding: 8px; color: #fff">
+                          ÉPICA 01: Seguridad y Acceso Global
+                        </td>
+                        <td style="padding: 8px; text-align: center">5 HU</td>
+                        <td style="padding: 8px; text-align: center">13 SP</td>
+                        <td
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #28a745;
+                            font-weight: bold;
+                          "
+                        >
+                          100% Validado
+                        </td>
+                      </tr>
+                      <tr
+                        style="
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                        "
+                      >
+                        <td style="padding: 8px; color: #fff">
+                          ÉPICA 02: Ecosistema de Dashboards (5 Perfiles)
+                        </td>
+                        <td style="padding: 8px; text-align: center">5 HU</td>
+                        <td style="padding: 8px; text-align: center">21 SP</td>
+                        <td
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #28a745;
+                            font-weight: bold;
+                          "
+                        >
+                          100% Validado
+                        </td>
+                      </tr>
+                      <tr
+                        style="
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                        "
+                      >
+                        <td style="padding: 8px; color: #fff">
+                          ÉPICA 03: Trazabilidad y Alertas (Auxiliar / Tutor)
+                        </td>
+                        <td style="padding: 8px; text-align: center">5 HU</td>
+                        <td style="padding: 8px; text-align: center">13 SP</td>
+                        <td
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #28a745;
+                            font-weight: bold;
+                          "
+                        >
+                          100% Validado
+                        </td>
+                      </tr>
+                      <tr
+                        style="
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                        "
+                      >
+                        <td style="padding: 8px; color: #fff">
+                          ÉPICA 04: Motor SQL Server y Gamificación ODS 4
+                        </td>
+                        <td style="padding: 8px; text-align: center">8 HU</td>
+                        <td style="padding: 8px; text-align: center">34 SP</td>
+                        <td
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #28a745;
+                            font-weight: bold;
+                          "
+                        >
+                          100% Validado
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div
+                class="trl-labels"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 0.7rem;
+                  color: var(--opaco);
+                  margin-top: 14px;
+                "
+              >
+                <span>Principios básicos</span>
+                <span style="color: #aed8f2; font-weight: bold"
+                  >TRL 4: Prototipo Validado en Laboratorio</span
+                >
+                <span>Producción</span>
+              </div>
+            </div>
+          </div>
+          <div class="seccion" style="margin-top: 25px">
+            <div
+              style="
+                font-size: 0.9rem;
+                font-weight: bold;
+                color: #fff;
+                margin-bottom: 4px;
+              "
+            >
+              🗄️ Evidencia de Diseño e Implementación en SQL Server
+            </div>
+            <p
+              style="
+                font-size: 0.75rem;
+                color: var(--opaco);
+                margin-bottom: 12px;
+                text-align: justify;
+              "
+            >
+              Documentación del componente de backend del proyecto, evidenciando
+              el Diagrama Entidad-Relación (DER) y la inserción exitosa de
+              scripts de prueba para verificar las restricciones de integridad y
+              la segregación por roles.
+            </p>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit: minmax(240px, 1fr));
+                gap: 14px;
+                margin-bottom: 20px;
+              "
+            >
+              <div
+                style="
+                  background: rgba(255, 255, 255, 0.02);
+                  border: 1px dashed rgba(174, 216, 242, 0.4);
+                  border-radius: 6px;
+                  padding: 10px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 0.78rem;
+                    font-weight: bold;
+                    color: #aed8f2;
+                    margin-bottom: 6px;
+                  "
+                >
+                  Figura C: Diagrama Entidad-Relación Detallado
+                </div>
+                <div
+                  class="dashboard-wrapper p-2 bg-white rounded border shadow-sm text-center"
+                  style="
+                    background-color: #1a252f !important;
+                    min-height: 150px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="./img/mer.png"
+                    width="200"
+                    height="100"
+                    alt="Diagrama Entidad Relación de la base de datos en SQL Server"
+                    class="img-fluid rounded"
+                    style="
+                      max-width: 100%;
+                      max-height: 140px;
+                      object-fit: contain;
+                      margin: 0 auto;
+                      display: block;
+                    "
+                  />
+                </div>
+              </div>
+
+              <div
+                style="
+                  background: rgba(255, 255, 255, 0.02);
+                  border: 1px dashed rgba(174, 216, 242, 0.4);
+                  border-radius: 6px;
+                  padding: 10px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 0.78rem;
+                    font-weight: bold;
+                    color: #aed8f2;
+                    margin-bottom: 6px;
+                  "
+                >
+                  Figura D: Ciclos y elementos de trabajo
+                </div>
+                <div
+                  class="dashboard-wrapper p-2 bg-white rounded border shadow-sm text-center"
+                  style="
+                    background-color: #1a252f !important;
+                    min-height: 150px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="./img/poblamiento_datos.jpeg"
+                    alt="Ejecución de scripts e integridad referencial en consola"
+                    class="img-fluid rounded"
+                    style="
+                      max-width: 100%;
+                      max-height: 140px;
+                      object-fit: contain;
+                      margin: 0 auto;
+                      display: block;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 15px">
+              <div
+                style="
+                  font-size: 0.82rem;
+                  font-weight: bold;
+                  color: #fff;
+                  margin-bottom: 8px;
+                "
+              >
+                📋 Arquitectura de Tablas y Restricciones del Sistema
+              </div>
+              <table
+                style="
+                  width: 100%;
+                  font-size: 0.78rem;
+                  border-collapse: collapse;
+                  background: rgba(0, 0, 0, 0.15);
+                "
+              >
+                <thead>
+                  <tr
+                    style="
+                      background: rgba(174, 216, 242, 0.1);
+                      border-bottom: 1px solid rgba(174, 216, 242, 0.2);
+                    "
+                  >
+                    <th style="padding: 8px; text-align: left; color: #aed8f2">
+                      Entidad Base
+                    </th>
+                    <th
+                      style="padding: 8px; text-align: center; color: #aed8f2"
+                    >
+                      Llave Primaria (PK)
+                    </th>
+                    <th
+                      style="padding: 8px; text-align: center; color: #aed8f2"
+                    >
+                      Restricciones (FK)
+                    </th>
+                    <th style="padding: 8px; text-align: right; color: #aed8f2">
+                      Foco Funcional
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.05)"
+                  >
+                    <td style="padding: 8px; color: #fff">dbo.usuarios</td>
+                    <td style="padding: 8px; text-align: center">ID_Usuario</td>
+                    <td style="padding: 8px; text-align: center">Ninguna</td>
+                    <td
+                      style="
+                        padding: 8px;
+                        text-align: right;
+                        color: var(--opaco);
+                      "
+                    >
+                      Centralización de accesos y roles
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.05)"
+                  >
+                    <td style="padding: 8px; color: #fff">dbo.alumno</td>
+                    <td style="padding: 8px; text-align: center">ID_Alumno</td>
+                    <td style="padding: 8px; text-align: center">
+                      ID_Auxiliar, ID_Tutor
+                    </td>
+                    <td
+                      style="
+                        padding: 8px;
+                        text-align: right;
+                        color: var(--opaco);
+                      "
+                    >
+                      Vinculación al tutor y auxiliar asignado
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.05)"
+                  >
+                    <td style="padding: 8px; color: #fff">dbo.calificacion</td>
+                    <td style="padding: 8px; text-align: center">Compuesta</td>
+                    <td style="padding: 8px; text-align: center">
+                      ID_Asignatura, ID_Alumno
+                    </td>
+                    <td
+                      style="
+                        padding: 8px;
+                        text-align: right;
+                        color: var(--opaco);
+                      "
+                    >
+                      Trazabilidad académica y notas
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.05)"
+                  >
+                    <td style="padding: 8px; color: #fff">dbo.inscripcion</td>
+                    <td style="padding: 8px; text-align: center">
+                      ID_Colegiatura
+                    </td>
+                    <td style="padding: 8px; text-align: center">ID_Alumno</td>
+                    <td
+                      style="
+                        padding: 8px;
+                        text-align: right;
+                        color: var(--opaco);
+                      "
+                    >
+                      Auditoría de estados de matrícula
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="seccion" style="margin-top: 25px">
+                <div
+                  style="
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    color: #fff;
+                    margin-bottom: 4px;
+                  "
+                >
+                  📊 Informes de Cierre de Proyecto y KPIs Metodológicos
+                </div>
+                <p
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--opaco);
+                    margin-bottom: 12px;
+                    text-align: justify;
+                  "
+                >
+                  Métricas de rendimiento e indicadores clave extraídos de la
+                  consola de reportes de JIRA Software. Estos datos evalúan la
+                  eficiencia del equipo, el cumplimiento de los objetivos y
+                  aseguran el control de calidad en el ciclo de desarrollo del
+                  prototipo TRL 4.
+                </p>
+
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit: minmax(240px, 1fr));
+                    gap: 14px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.02);
+                      border: 1px dashed rgba(174, 216, 242, 0.4);
+                      border-radius: 6px;
+                      padding: 10px;
+                    "
+                  >
+                    <div
+                      style="
+                        font-size: 0.78rem;
+                        font-weight: bold;
+                        color: #aed8f2;
+                        margin-bottom: 6px;
+                      "
+                    >
+                      Figura E: Gráfico de Trabajo Pendiente (Burndown Chart)
+                    </div>
+                    <div
+                      class="dashboard-wrapper p-2 bg-white rounded border shadow-sm text-center"
+                      style="
+                        background-color: #1a252f !important;
+                        min-height: 150px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      <img
+                        src="./img/trabajo_pendiente.jpeg"
+                        alt="Gráfico de Burndown Chart extraído de JIRA"
+                        class="img-fluid rounded"
+                        style="
+                          max-width: 100%;
+                          max-height: 140px;
+                          object-fit: contain;
+                          margin: 0 auto;
+                          display: block;
+                        "
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.02);
+                      border: 1px dashed rgba(174, 216, 242, 0.4);
+                      border-radius: 6px;
+                      padding: 10px;
+                    "
+                  >
+                    <div
+                      style="
+                        font-size: 0.78rem;
+                        font-weight: bold;
+                        color: #aed8f2;
+                        margin-bottom: 6px;
+                      "
+                    >
+                      Figura F: Gráfico de Velocidad del Equipo (Velocity Chart)
+                    </div>
+                    <div
+                      class="dashboard-wrapper p-2 bg-white rounded border shadow-sm text-center"
+                      style="
+                        background-color: #1a252f !important;
+                        min-height: 150px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      <img
+                        src="./img/Dashboard_Administrador.jpeg"
+                        alt="Gráfico de velocidad por sprint en JIRA"
+                        class="img-fluid rounded"
+                        style="
+                          max-width: 100%;
+                          max-height: 140px;
+                          object-fit: contain;
+                          margin: 0 auto;
+                          display: block;
+                        "
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div style="margin-top: 15px">
+                  <div
+                    style="
+                      font-size: 0.82rem;
+                      font-weight: bold;
+                      color: #fff;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    📈 Matriz de KPIs y Métricas de Rendimiento Final del
+                    Proyecto
+                  </div>
+                  <table
+                    style="
+                      width: 100%;
+                      font-size: 0.78rem;
+                      border-collapse: collapse;
+                      background: rgba(0, 0, 0, 0.15);
+                    "
+                  >
+                    <thead>
+                      <tr
+                        style="
+                          background: rgba(174, 216, 242, 0.1);
+                          border-bottom: 1px solid rgba(174, 216, 242, 0.2);
+                        "
+                      >
+                        <th
+                          style="padding: 8px; text-align: left; color: #aed8f2"
+                        >
+                          Indicador Clave (KPI)
+                        </th>
+                        <th
+                          style="
+                            padding: 8px;
+                            text-align: center;
+                            color: #aed8f2;
+                          "
+                        >
+                          Meta Establecida
+                        </th>
+                        <th
+                          style="
+                            padding: 8px;
+                            text-align: center;
+                            color: #aed8f2;
+                          "
+                        >
+                          Resultado Logrado
+                        </th>
+                        <th
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #aed8f2;
+                          "
+                        >
+                          Estado / Cumplimiento
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        style="
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                        "
+                      >
+                        <td style="padding: 8px; color: #fff">
+                          <strong>Cobertura de Requerimientos</strong>
+                        </td>
+                        <td style="padding: 8px; text-align: center">
+                          100% de Historias
+                        </td>
+                        <td style="padding: 8px; text-align: center">
+                          23 / 23 HU completadas
+                        </td>
+                        <td
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #28a745;
+                            font-weight: bold;
+                          "
+                        >
+                          Éxito (100%)
+                        </td>
+                      </tr>
+                      <tr
+                        style="
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                        "
+                      >
+                        <td style="padding: 8px; color: #fff">
+                          <strong>Velocidad de Entrega (Velocity)</strong>
+                        </td>
+                        <td style="padding: 8px; text-align: center">
+                          &gt; 15 Puntos por Sprint
+                        </td>
+                        <td style="padding: 8px; text-align: center">
+                          20 Puntos (Promedio)
+                        </td>
+                        <td
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #28a745;
+                            font-weight: bold;
+                          "
+                        >
+                          Excelente
+                        </td>
+                      </tr>
+                      <tr
+                        style="
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                        "
+                      >
+                        <td style="padding: 8px; color: #fff">
+                          <strong>Densidad de Defectos (QA)</strong>
+                        </td>
+                        <td style="padding: 8px; text-align: center">
+                          &lt; 10% Errores Críticos
+                        </td>
+                        <td style="padding: 8px; text-align: center">
+                          0 Bloqueantes en UAT
+                        </td>
+                        <td
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #28a745;
+                            font-weight: bold;
+                          "
+                        >
+                          Estable (Smoke Test)
+                        </td>
+                      </tr>
+                      <tr
+                        style="
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                        "
+                      >
+                        <td style="padding: 8px; color: #fff">
+                          <strong>Poblamiento Inicial del Backend</strong>
+                        </td>
+                        <td style="padding: 8px; text-align: center">
+                          &gt; 30 Registros SQL
+                        </td>
+                        <td style="padding: 8px; text-align: center">
+                          52 Registros insertados
+                        </td>
+                        <td
+                          style="
+                            padding: 8px;
+                            text-align: right;
+                            color: #28a745;
+                            font-weight: bold;
+                          "
+                        >
+                          Superado (+73%)
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="col">
+          <div class="seccion">
+            <div class="seccion-titulo">Resultados</div>
+            <p>
+              Prototipo funcional de alta fidelidad validado en entorno de
+              laboratorio (TRL4). El sistema integra 5 roles con 23 historias de
+              usuario completadas en 4 Sprints y 50 registros SQL con integridad
+              referencial verificada.
+            </p>
+            <table style="margin-top: 8px">
+              <thead>
+                <tr>
+                  <th>Rol</th>
+                  <th>Modulos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alumno</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Profesor</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Tutor/Padre</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Auxiliar</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>Administrador</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="seccion">
+            <div class="seccion-titulo">Conclusiones del Proyecto</div>
+            <ul>
+              <li>
+                <strong style="color: #fff"
+                  >Alineación Estratégica con el ODS 4</strong
+                >
+                — La plataforma "Aulas sin Fronteras" se consolida como una
+                respuesta efectiva a las metas del Objetivo de Desarrollo
+                Sostenible 4 (Educación de Calidad e Inclusión), al proveer un
+                entorno adaptado que disminuye las asimetrías de aprendizaje y
+                promueve la permanencia escolar de los niños de la IED Rural El
+                Destino.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Viabilidad del Prototipo TRL 4</strong
+                >
+                — La validación en laboratorio demuestra con éxito la viabilidad
+                técnica de una plataforma educativa deslocalizada. Se logró
+                transitar desde un diseño conceptual estático hacia un sistema
+                funcional de alta fidelidad, interactivo y desplegado
+                públicamente en GitHub Pages sin dependencias de red críticas.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Red de Acompañamiento Humano y Digital</strong
+                >
+                — La estructuración modular de los tableros demostró que la
+                tecnología potencia el tejido social rural. Incluir al Auxiliar
+                Académico como núcleo operativo en campo y al Tutor (Padre) como
+                supervisor directo genera un canal bidireccional de alertas que
+                reduce significativamente el riesgo de deserción en entornos
+                dispersos.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Gobernanza de Datos e Integridad en SQL Server</strong
+                >
+                — Las pruebas sobre el motor relacional, validadas mediante
+                consultas agregadas sobre los más de 50 registros poblados,
+                confirmaron el cumplimiento estricto de la integridad
+                referencial. Esto garantiza que la información académica de los
+                diferentes perfiles sea consistente, segura y libre de
+                redundancias.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Mitigación de la Brecha de Infraestructura</strong
+                >
+                — La arquitectura basada en estándares ligeros de Frontend
+                (HTML5, CSS3, JS ES6) prueba que es posible ofrecer una
+                experiencia interactiva sin requerir inversiones físicas
+                adicionales en hardware o redes de alta velocidad dentro de la
+                zona rural de Usme, optimizando al máximo los recursos
+                disponibles.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Garantía Metodológica con JIRA Software</strong
+                >
+                — La migración del control de tareas tradicional hacia un
+                entorno Scrum/Kanban en Jira permitió orquestar con madurez de
+                ingeniería el ciclo de vida del software. El uso de épicas,
+                backlog priorizado e historias de usuario aseguró la
+                trazabilidad total de los 23 requerimientos clave a lo largo de
+                los 4 Sprints ejecutados.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Gamificación Educativa Motivacional</strong
+                >
+                — El sistema de mecánicas lúdicas y la entrega gamificada de
+                medallas y logros (Oro, Plata, Bronce) incrementa de manera
+                medible el compromiso, el autoaprendizaje y el índice de
+                recordación del alumno en los módulos interactivos diseñados.
+              </li>
+              <li>
+                <strong style="color: #fff"
+                  >Escalabilidad Técnica (Fases TRL 5+)</strong
+                >
+                — La separación modular del código cliente y el plano relacional
+                de los datos deja el sistema en un estado idóneo para su
+                migración hacia un framework robusto de backend como Laravel.
+                Esto facilitará la integración de APIs y mayor concurrencia en
+                futuras fases avanzadas de maduración tecnológica.
+              </li>
+            </ul>
+          </div>
+
+          <div class="seccion">
+            <div class="seccion-titulo">Bibliografia</div>
+            <ul class="biblio-list">
+              <li>
+                Armijos Carrion, J. L. et al. (2021). Metricas del desarrollo de
+                software movil. <em>3C Tecnologia, 10</em>(3), 17–37.
+              </li>
+              <li>
+                Bonilla, H. A. M. & Gutierrez, D. F. V. (2024). Desarrollo
+                empresarial en la educacion superior.
+                <em>Educatio Siglo XXI, 42</em>(1), 89–114.
+              </li>
+              <li>
+                De La Cruz-Vargas, J. A. et al. (2022). El poster cientifico.
+                <em>Rev. Fac. Med. Humana, 16</em>(1).
+              </li>
+              <li>
+                Espinoza Yauri, G. Y. (2023).
+                <em>Nivel de madurez tecnologica</em>. UPCH.
+              </li>
+              <li>UNAD. (2026). <em>Guia de aprendizaje Fase 5</em>. ECBTI.</li>
+              <li>
+                Atlassian. (2026). <em>Gestion Scrum Proyecto ASF</em>. Jira
+                Cloud.
+              </li>
+              <li>
+                GitHub. (2026).
+                <em>Despliegue GitHub Pages — Aulas Sin Fronteras</em>.
+              </li>
+            </ul>
+          </div>
+
+          <div class="seccion">
+            <div class="seccion-titulo">Agradecimientos</div>
+            <p>
+              A la IED Rural El Destino en la localidad de Usme por abrir las
+              puertas de su comunidad, permitiendo la validación de
+              requerimientos técnicos y pedagógicos fundamentales para
+              contextualizar esta plataforma de acuerdo con las realidades de la
+              educación rural. A nuestra tutora, la ingeniera Angélica Calderón,
+              por su invaluable orientación metodológica, rigurosidad académica
+              y constante acompañamiento a lo largo del curso de Proyecto de
+              Ingeniería II, siendo un pilar fundamental para guiar el
+              desarrollo de este prototipo. Finalmente, a cada uno de los
+              integrantes del equipo de trabajo colaborativo por su dedicación,
+              sinergia y esfuerzo técnico en la construcción de esta solución
+              interactiva enfocada en el cumplimiento del ODS 4.
+            </p>
+            <div class="acceso-box">
+              <div
+                class="seccion"
+                style="margin-top: 20px; display: flex; flex-direction: column"
+              >
+                <div
+                  class="seccion-titulo"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <span>Prototipo Interactivo en Vivo</span>
+                </div>
+
+                <p
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--opaco);
+                    margin-bottom: 10px;
+                  "
+                >
+                  Use el siguiente contenedor para interactuar directamente con
+                  la plataforma real desplegada en el servidor:
+                </p>
+
+                <div
+                  style="
+                    width: 100%;
+                    min-height: 150px;
+                    background: #fff;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    border: 2px solid rgba(174, 216, 242, 0.3);
+                    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+                  "
+                >
+                  <iframe
+                    src="https://jdlara83.github.io/proyecto_ingenieria_1/index.html"
+                    title="Prototipo Aulas sin Fronteras - GitHub Pages"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      min-height: 450px;
+                      border: none;
+                      background: #fff;
+                    "
+                    sandbox="allow-scripts allow-same-origin allow-forms"
+                    loading="lazy"
+                  >
+                  </iframe>
+                </div>
+
+                <div style="margin-top: 8px; text-align: right">
+                  <a
+                    href="https://jdlara83.github.io/proyecto_ingenieria_1/index.html"
+                    target="_blank"
+                    style="
+                      color: #aed8f2;
+                      font-size: 0.75rem;
+                      text-decoration: underline;
+                    "
+                  >
+                    Abrir en pestaña completa ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIE -->
+      <div class="pie">
+        <span>UNAD — Universidad Nacional Abierta y a Distancia — ECBTI</span>
+        <span>TRL4 — Validado en laboratorio — Fase 5</span>
+        <span>Codigo 202337121 — Mayo 2026</span>
+      </div>
+    </div>
+  </body>
+</html>
